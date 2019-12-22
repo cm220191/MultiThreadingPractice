@@ -1,10 +1,10 @@
 package src.main.test;
 
-public class SharedPrinter {
+public class NumberPrinter {
 	
 	boolean isEvenPrinted = true;
 	
-	synchronized void printOdd(int number) {
+	synchronized void printOddNumber(int number) {
 		while(! isEvenPrinted) {
 			try {
 				wait();
@@ -23,7 +23,7 @@ public class SharedPrinter {
 			}
 			notify();
 	}
-	synchronized void printEven(int number) {
+	synchronized void printEvenNumber(int number) {
 		while(isEvenPrinted) {
 			try {
 				wait();

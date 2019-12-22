@@ -1,11 +1,11 @@
 package src.main.test;
 
-public class Thread2 extends Thread {
+public class EvenNumberPrinter extends Thread {
 	
 	int limit;
-	SharedPrinter printer;
+	NumberPrinter printer;
 	
-	public Thread2(int limit, SharedPrinter printer) {
+	public EvenNumberPrinter(int limit, NumberPrinter printer) {
 		this.limit=limit;
 		this.printer=printer;
 	}
@@ -14,7 +14,7 @@ public class Thread2 extends Thread {
 	public void run() {
 		int evenNumber = 2;
 		while(evenNumber < limit) {
-			printer.printEven(evenNumber);
+			printer.printEvenNumber(evenNumber);
 			evenNumber=evenNumber+2;
 		}
 	}

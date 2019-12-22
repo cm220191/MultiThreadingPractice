@@ -1,11 +1,11 @@
 package src.main.test;
 
-public class Thread1 extends Thread {
+public class OddNumberPrinter extends Thread {
 	
 	int limit;
-	SharedPrinter printer;
+	NumberPrinter printer;
 	
-	public Thread1(int limit, SharedPrinter printer) {
+	public OddNumberPrinter(int limit, NumberPrinter printer) {
 		this.limit=limit;
 		this.printer=printer;
 	}
@@ -14,7 +14,7 @@ public class Thread1 extends Thread {
 	public void run() {
 		int oddNumber=1;
 		while(oddNumber<limit) {
-			printer.printOdd(oddNumber);
+			printer.printOddNumber(oddNumber);
 			oddNumber=oddNumber+2;
 		}
 		
